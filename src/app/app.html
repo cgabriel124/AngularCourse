@@ -1,8 +1,50 @@
 <div class="container">
+    <nav>
+        <ul>
+            <li>
+                <a routerLink="/home" routerLinkActive="active">Home</a>
+            </li>
+            <li>
+                <a routerLink="/contador" routerLinkActive="active">Contador</a>
+            </li>
+            <li>
+                <a routerLink="/botones" routerLinkActive="active">Botones</a>
+            </li>
+            <li>
+                <a routerLink="/formulario" routerLinkActive="active">Formulario</a>
+            </li>
+            <li>
+                <a routerLink="/bucles" routerLinkActive="active">Bucles</a>
+            </li>
+            <li>
+                <a routerLink="/switch" routerLinkActive="active">Switch</a>
+            </li>
+            <li>
+                <a routerLink="/formulario-plantilla" routerLinkActive="active">Formulario Plantilla</a>
+            </li>
+            <li>
+                <a routerLink="/formulario-reactivo" routerLinkActive="active">Formulario Reactivo</a>
+            </li>
+            <li>
+                <a routerLink="/children" routerLinkActive="active">Children</a>
+            </li>
+            <li>
+                <a routerLink="/add-messages" routerLinkActive="active">Add Messages</a>
+            </li>
+            <li>
+                <a routerLink="/list-messages" routerLinkActive="active">List Messages</a>
+            </li>
+        </ul>
+    </nav>
 
-
+    <hr>
     <h3>Enrutamiento</h3>
-    <router-outlet></router-outlet>
+    <div class="card">
+        <div class="card-body">
+            <router-outlet></router-outlet>
+        </div>
+        
+    </div>
     <h3>Fin Enrutamiento</h3>
     <hr>
 

@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { Contador } from "./contador/contador";
 import { Botones } from "./botones/botones";
 import { Formulario } from "./formulario/formulario";
@@ -32,7 +32,9 @@ import { RouterModule, Routes } from '@angular/router';
     FormsModule,
     AddMessages,
     ListMessages,
-    RouterOutlet
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
