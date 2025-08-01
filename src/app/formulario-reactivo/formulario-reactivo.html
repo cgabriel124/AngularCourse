@@ -1,0 +1,59 @@
+<h1>Formulario reactivo</h1>
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="formUser" (ngSubmit)="enviarFormulario()">
+            <div class="mb-2">
+                <label class="form-label">
+                    Nombre
+                </label>
+                <input type="text" class="form-control" placeholder="Ingrese su nombre" formControlName="name">
+                @if(name.invalid && name.touched) {
+                    <div class="alert alert-danger">
+                        El nombre tiene problemas
+                    </div>
+                }
+                
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label">
+                    Email
+                </label>
+                <input type="email" class="form-control" placeholder="Ingrese su correo" formControlName="email">
+
+                @if(email.invalid && email.touched) {
+                    <div class="alert alert-danger">
+                        @if (email.hasError('required')) {
+                        <span>
+                            El email es obligatorio.
+                        </span>
+                        }
+                        @if (email.hasError('email')) {
+                        <span>
+                            Este no es un email válido, revíselo.
+                        </span>
+                        }
+                    </div>  
+                }
+
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label">
+                    Edad
+                </label>
+                <input type="number" class="form-control" placeholder="Ingrese su edad" formControlName="age">
+            </div>
+
+            <button class="btn btn-primary" [disabled]="formUser.invalid" type="submit">
+                Enviar
+            </button>
+        </form>
+    </div>
+</div>
+
+{{formUser.get('name')?.value}}
+<br>
+{{formUser.get('email')?.value}}
+<br>
+{{formUser.get('age')?.value}}

@@ -1,0 +1,22 @@
+<input type="text"
+       placeholder="Ingrese un dia"
+       class="form-control"
+       #ingreso_dia>
+<button class="btn btn-primary mt-2 mb-4" (click)="dia = ingreso_dia.value">Mostrar dia</button>
+
+@if (dia) {
+  @switch (dia) {
+    @case ("1") {
+      <div>lunes</div>
+    }
+    @case ("2") {
+      <div>martes</div>
+    }
+    @case ("3") {
+      <div>miércoles</div>
+    }
+    @default {
+      <div>otro dia</div>
+    }
+  }
+}

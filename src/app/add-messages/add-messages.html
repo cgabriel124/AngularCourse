@@ -1,0 +1,6 @@
+<h3>Añadir Mensajes</h3>
+<form (ngSubmit)="addMessage()">
+    <label class="form-label">Ingrese un Mensaje</label>
+    <input type="text" class="form-control" placeholder="Ingrese su mensaje" [(ngModel)]="messageToSend" name="messageToSend">
+    <button class="btn btn-primary mt-2 mb-4" type="submit">Enviar</button>
+</form>

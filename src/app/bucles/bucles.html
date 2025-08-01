@@ -1,0 +1,8 @@
+<div>bucles</div>
+<ul>
+    @for (persona of personas; track persona.id; let i = $index) {
+    <div>Usuario inde con $index ={{ $index + 1 }}</div>
+    <div>Usuario indice con i ={{ i }}</div>
+    <li>{{ persona.nombre }} {{ persona.apellido }} {{ persona.edad }}</li>
+    }
+</ul>

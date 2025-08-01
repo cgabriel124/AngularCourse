@@ -1,0 +1,12 @@
+<h3>Componente Visualizar mensajes</h3>
+<div class="card">
+    <div class="card-body">
+        <ul>
+            
+            @for( message of messagesService.messages; track $index) {
+                <li>Usuario: {{ autor }}</li>
+                <li>{{ message }}</li>
+            }
+        </ul>
+    </div>
+</div>

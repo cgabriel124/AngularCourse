@@ -1,0 +1,64 @@
+<h1>Formulario plantilla</h1>
+<div class="card">
+    <div class="card-body">
+
+        <form (ngSubmit)="procesarFormulario()" #formularioDatos="ngForm">
+            <div class="mb-2">
+                <label class="form-label">
+                    Nombre:
+                </label>
+                <input type="text" placeholder="Ingrese su nombre" class="form-control" [(ngModel)]="persona.nombre" name="nombre" required #nombrePlantilla="ngModel">
+                
+                @if (nombrePlantilla.invalid && nombrePlantilla.touched) {
+                <div class="alert alert-danger mt-2">
+                    Este campo es obligatorio
+                </div>
+                }
+
+            </div>
+            <div class="mb-2">
+                <label class="form-label">
+                    Apellido:
+                </label>
+                <input type="text" placeholder="Ingrese su apellido" class="form-control" [(ngModel)]="persona.apellido" name="apellido" required #apellidoPlantilla="ngModel">
+                @if (apellidoPlantilla.invalid && apellidoPlantilla.touched) {
+                <div class="alert alert-danger mt-2">
+                    Este campo es obligatorio
+                </div>
+                }
+            </div>
+            <div class="mb-2">
+                <label class="form-label">
+                    Edad:
+                </label>
+                <input type="number" placeholder="Ingrese su edad" class="form-control" [(ngModel)]="persona.edad" name="edad" required #edadPlantilla="ngModel">
+                @if (edadPlantilla.invalid && edadPlantilla.touched) {
+                <div class="alert alert-danger mt-2">
+                    Este campo es obligatorio
+                </div>
+                }
+            </div>
+            <button class="btn btn-primary mt-2" [disabled]="formularioDatos.invalid">
+                Enviar
+            </button>
+        </form>
+    </div>
+    @if(envioRealizado) {
+    <div class="alert alert-success mt-4" role="alert">
+        ¡El formulario se ha enviado correctamente!
+    </div>
+    }
+</div>
+
+<hr>
+{{formularioDatos.valid}}
+<hr>
+<p>Errores del nombre</p>
+{{nombrePlantilla.errors | json}}
+<hr>
+<p>Los datos del nombre son validos?</p>
+{{nombrePlantilla.valid}}
+<hr>
+{{persona | json}}
+
+<div class="mb-4"></div>
