@@ -13,6 +13,8 @@ import { AddMessages } from "./add-messages/add-messages";
 import { ListMessages } from "./list-messages/list-messages";
 import { PageNotFound } from './page-not-found/page-not-found';
 import { Home } from './home/home';
+import { Courses } from './courses/courses';
+import { CourseDetail } from './course-detail/course-detail';
 
 import { RouterModule, Routes } from '@angular/router';
 
@@ -34,7 +36,9 @@ import { RouterModule, Routes } from '@angular/router';
     ListMessages,
     RouterOutlet,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    
+
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',

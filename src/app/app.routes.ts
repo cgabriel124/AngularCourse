@@ -12,6 +12,8 @@ import { AddMessages } from "./add-messages/add-messages";
 import { ListMessages } from "./list-messages/list-messages";
 import { PageNotFound } from "./page-not-found/page-not-found";
 import { Home } from "./home/home";
+import { Courses } from './courses/courses';
+import { CourseDetail } from './course-detail/course-detail';
 
 
 export const routes: Routes = [
@@ -28,6 +30,10 @@ export const routes: Routes = [
   { path: 'children', component: Children },
   { path: 'add-messages', component: AddMessages },
   { path: 'list-messages', component: ListMessages },
+  { path: 'courses', component: Courses },
+  { path: 'courses/:courseName', component: CourseDetail },
+
+  //La ruta alternativa siempre al final
   { path: '**', component: PageNotFound },
 
 ];
