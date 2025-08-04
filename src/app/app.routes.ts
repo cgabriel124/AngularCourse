@@ -14,12 +14,22 @@ import { PageNotFound } from "./page-not-found/page-not-found";
 import { Home } from "./home/home";
 import { Courses } from './courses/courses';
 import { CourseDetail } from './course-detail/course-detail';
+import { Pokedex } from './pokedex/pokedex';
+import { Pokemon } from './pokemon/pokemon';
+import { Region } from './region/region';
 
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: Home },
+  { path: 'pokedex', component: Pokedex,
+    children: [
+      { path: 'pokemon', component: Pokemon },
+      { path: 'region', component: Region }
+    ]
+  },
 
+
+  { path: 'home', component: Home },
   { path: 'contador', component: Contador },
   { path: 'botones', component: Botones },
   { path: 'formulario', component: Formulario },

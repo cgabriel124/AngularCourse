@@ -15,6 +15,8 @@ import { PageNotFound } from './page-not-found/page-not-found';
 import { Home } from './home/home';
 import { Courses } from './courses/courses';
 import { CourseDetail } from './course-detail/course-detail';
+import { Pokedex } from './pokedex/pokedex';
+import { Pokemon } from './pokemon/pokemon';
 
 import { RouterModule, Routes } from '@angular/router';
 
@@ -37,6 +39,8 @@ import { RouterModule, Routes } from '@angular/router';
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
+    Pokedex,
+    Pokemon
     
 
   ],
