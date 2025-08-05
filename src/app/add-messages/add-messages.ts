@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { Component} from '@angular/core';
 import { Messages } from '../messages';
 import { JsonPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';

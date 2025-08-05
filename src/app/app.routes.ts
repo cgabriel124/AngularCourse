@@ -23,11 +23,12 @@ export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'pokedex', component: Pokedex,
     children: [
-      { path: 'pokemon', component: Pokemon },
+      { path: 'pokemon', 
+        loadChildren: () => import('./pokemon/pokemon.routes').then(m => m.pokemonRoutes)
+      },
       { path: 'region', component: Region }
     ]
   },
-
 
   { path: 'home', component: Home },
   { path: 'contador', component: Contador },

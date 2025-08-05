@@ -39,8 +39,6 @@ import { RouterModule, Routes } from '@angular/router';
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
-    Pokedex,
-    Pokemon
     
 
   ],
